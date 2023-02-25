@@ -8,7 +8,6 @@ export class RemoveBook extends BaseApi {
     removeOneOfTheAddedBook(keyword: string, jsonValue: any) {
         cy.fixture(jsonValue).then((finalJson) => {
             finalJson['userId'] = Cypress.env("userID");
-            cy.log(Cypress.env("userID"))
             this.submitApiRequest(
                 this.baseUrl(keyword),
                 finalJson,

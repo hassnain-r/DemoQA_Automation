@@ -21,7 +21,6 @@ export class AddBook extends BaseApi {
 
     bookMustGetAddedWithValidUserId(keyword: string, jsonValue: any) {
         cy.fixture(jsonValue).then((finalJson) => {
-            cy.log(Cypress.env("userID"), "///////////////////////////////////////////");
             finalJson['userId'] = Cypress.env("userID");
             this.submitApiRequest(
                 this.baseUrl(keyword),
@@ -35,6 +34,5 @@ export class AddBook extends BaseApi {
             });
         });
     }
-
 
 }
