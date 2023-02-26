@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "target": "es6",
+    "module": "es6",
+    "allowJs": true,
+    "jsx": "react",
+    "strictNullChecks": false,
+    "strict": true,
+    "baseUrl": "../node_modules",
+    "lib": ["ESNext", "DOM"],
+    "types": ["node", "cypress", "cypress-localstorage-commands", "cypress-file-upload", "@4tw/cypress-drag-drop"],
+    "typeRoots": ["./support"]
+  },
+  "include": [
+    "**/*.ts",
+    "node_modules/cypress",
+    "node_modules/cypress-localstorage-commands",
+    "plugins/index.ts",
+    "support/commands.js",
+    "../node_modules/cypress-file-upload/types/index.d.ts"
+  ]
+}
